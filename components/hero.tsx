@@ -36,10 +36,10 @@ export function Hero() {
         />
       </div>
 
-      {/* Neon Glow Effects */}
-      <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-primary/20 blur-[150px]" />
-      <div className="absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-secondary/20 blur-[120px]" />
-      <div className="absolute right-1/3 top-1/2 h-64 w-64 rounded-full bg-accent/15 blur-[100px]" />
+      {/* Neon Glow Effects - reduced blur for better performance */}
+      <div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-primary/15 blur-[80px]" />
+      <div className="absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-secondary/15 blur-[60px]" />
+      <div className="absolute right-1/3 top-1/2 h-64 w-64 rounded-full bg-accent/10 blur-[50px]" />
 
       {/* Background logo watermark */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
@@ -122,91 +122,74 @@ export function Hero() {
               <span className="text-accent animate-glowMagenta">gwarancja jakości</span>.
             </motion.p>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons - CSS transitions for hover */}
             <motion.div 
               className="mb-10 flex flex-col gap-4 sm:flex-row"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  size="lg"
-                  className="group relative overflow-hidden bg-primary px-8 py-6 font-[family-name:var(--font-display)] text-base font-bold uppercase tracking-wider text-primary-foreground transition-all hover:scale-105"
-                  onClick={() => document.getElementById("wycena")?.scrollIntoView({ behavior: "smooth" })}
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Bezpłatna wycena
-                    <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-secondary/50 bg-secondary/5 px-8 py-6 font-[family-name:var(--font-display)] text-base font-bold uppercase tracking-wider text-secondary transition-all hover:border-secondary hover:bg-secondary/10"
-                  onClick={() => document.getElementById("uslugi")?.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Zobacz usługi
-                </Button>
-              </motion.div>
+              <Button
+                size="lg"
+                className="group relative overflow-hidden bg-primary px-8 py-6 font-[family-name:var(--font-display)] text-base font-bold uppercase tracking-wider text-primary-foreground transition-transform duration-200 hover:scale-105 active:scale-95"
+                onClick={() => document.getElementById("wycena")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  Bezpłatna wycena
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-secondary/50 bg-secondary/5 px-8 py-6 font-[family-name:var(--font-display)] text-base font-bold uppercase tracking-wider text-secondary transition-all duration-200 hover:scale-105 hover:border-secondary hover:bg-secondary/10 active:scale-95"
+                onClick={() => document.getElementById("uslugi")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Zobacz usługi
+              </Button>
             </motion.div>
 
-            {/* Stats */}
+            {/* Stats - CSS transitions instead of Framer Motion for better performance */}
             <motion.div 
               className="grid w-full grid-cols-3 gap-3"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <motion.div 
-                className="group relative overflow-hidden rounded border border-border/50 bg-card/50 p-4 backdrop-blur-sm transition-all hover:border-primary/50"
-                whileHover={{ scale: 1.05, borderColor: "rgba(252, 224, 30, 0.5)" }}
-              >
-                <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-primary/10 blur-xl transition-all group-hover:bg-primary/20" />
+              <div className="group relative overflow-hidden rounded border border-border/50 bg-card/50 p-4 transition-all duration-200 hover:scale-105 hover:border-primary/50">
+                <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-primary/10 blur-lg transition-all group-hover:bg-primary/20" />
                 <Zap className="mb-2 h-5 w-5 text-primary" />
                 <div className="font-[family-name:var(--font-display)] text-2xl font-bold text-primary">24h</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Naprawa</div>
-              </motion.div>
-              <motion.div 
-                className="group relative overflow-hidden rounded border border-border/50 bg-card/50 p-4 backdrop-blur-sm transition-all hover:border-secondary/50"
-                whileHover={{ scale: 1.05, borderColor: "rgba(0, 236, 255, 0.5)" }}
-              >
-                <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-secondary/10 blur-xl transition-all group-hover:bg-secondary/20" />
+              </div>
+              <div className="group relative overflow-hidden rounded border border-border/50 bg-card/50 p-4 transition-all duration-200 hover:scale-105 hover:border-secondary/50">
+                <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-secondary/10 blur-lg transition-all group-hover:bg-secondary/20" />
                 <Shield className="mb-2 h-5 w-5 text-secondary" />
                 <div className="font-[family-name:var(--font-display)] text-2xl font-bold text-secondary">2 lata</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Gwarancja</div>
-              </motion.div>
-              <motion.div 
-                className="group relative overflow-hidden rounded border border-border/50 bg-card/50 p-4 backdrop-blur-sm transition-all hover:border-accent/50"
-                whileHover={{ scale: 1.05, borderColor: "rgba(255, 0, 136, 0.5)" }}
-              >
-                <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-accent/10 blur-xl transition-all group-hover:bg-accent/20" />
+              </div>
+              <div className="group relative overflow-hidden rounded border border-border/50 bg-card/50 p-4 transition-all duration-200 hover:scale-105 hover:border-accent/50">
+                <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-accent/10 blur-lg transition-all group-hover:bg-accent/20" />
                 <Clock className="mb-2 h-5 w-5 text-accent" />
                 <div className="font-[family-name:var(--font-display)] text-2xl font-bold text-accent">5000+</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Ekranów</div>
-              </motion.div>
+              </div>
             </motion.div>
           </div>
 
           {/* Right: Hero image */}
           <motion.div 
             className="relative flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            {/* Ambient glow behind the image */}
-            <motion.div 
-              className="absolute h-[500px] w-[500px] rounded-full bg-primary/15 blur-[120px]"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 4, repeat: Infinity }}
-            />
-            <div className="absolute h-[350px] w-[350px] rounded-full bg-secondary/10 blur-[90px]" />
-            <div className="absolute h-[250px] w-[250px] rounded-full bg-accent/10 blur-[70px]" />
+            {/* Ambient glow behind the image - static, no animation for performance */}
+            <div className="absolute h-[400px] w-[400px] rounded-full bg-primary/10 blur-[60px]" />
+            <div className="absolute h-[300px] w-[300px] rounded-full bg-secondary/8 blur-[50px]" />
+            <div className="absolute h-[200px] w-[200px] rounded-full bg-accent/8 blur-[40px]" />
 
-            <motion.div whileHover={{ scale: 1.05 }}>
+            <div className="transition-transform duration-300 hover:scale-105">
               <Image
                 src="/hero-image.png"
                 alt="ScreenHero - cyberpunkowy bohater naprawy ekranów"
@@ -216,7 +199,7 @@ export function Hero() {
                 style={{ mixBlendMode: "screen" }}
                 priority
               />
-            </motion.div>
+            </div>
           </motion.div>
 
         </div>

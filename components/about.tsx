@@ -36,155 +36,94 @@ export function About() {
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          {/* Left Column - Stats Cards */}
+          {/* Left Column - Stats Cards - optimized with CSS transitions */}
           <motion.div 
             className="hidden lg:block"
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className="grid gap-4">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <motion.div 
+                  <div 
                     key={index} 
-                    className="rounded border border-border/50 bg-background/50 p-6 backdrop-blur-sm"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05, borderColor: "rgba(252, 224, 30, 0.5)" }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    className="rounded border border-border/50 bg-background/50 p-6 transition-all duration-200 hover:scale-105 hover:border-primary/50"
                   >
                     <Icon className="mb-3 h-8 w-8 text-primary" />
-                    <motion.div 
-                      className="font-[family-name:var(--font-display)] text-3xl font-bold text-primary"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ duration: 0.8, delay: index * 0.1 + 0.2 }}
-                      viewport={{ once: true, amount: 0.3 }}
-                    >
+                    <div className="font-[family-name:var(--font-display)] text-3xl font-bold text-primary">
                       {stat.value}
-                    </motion.div>
+                    </div>
                     <div className="text-sm text-muted-foreground">
                       {stat.label}
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>
 
-            {/* Floating glow */}
-            <motion.div 
-              className="absolute -left-4 -top-4 h-24 w-24 rounded bg-primary/20 blur-3xl"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 3, repeat: Infinity }}
-            />
-            <motion.div 
-              className="absolute -bottom-4 -right-4 h-24 w-24 rounded bg-secondary/20 blur-3xl"
-              animate={{ scale: [1, 1.15, 1] }}
-              transition={{ duration: 3.5, repeat: Infinity }}
-            />
+            {/* Static glow - no animation for performance */}
+            <div className="absolute -left-4 -top-4 h-24 w-24 rounded bg-primary/15 blur-xl" />
+            <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded bg-secondary/15 blur-xl" />
           </motion.div>
 
-          {/* Right Column - Content */}
+          {/* Right Column - Content - simplified animations */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <motion.div 
-              className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2"
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2">
               <span className="text-sm font-medium uppercase tracking-wider text-primary">
                 O nas
               </span>
-            </motion.div>
+            </div>
 
-            <motion.h2 
-              className="mb-6 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-foreground md:text-5xl"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
+            <h2 className="mb-6 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-foreground md:text-5xl">
               EKSPERCI W <span className="text-secondary animate-glowCyan">NAPRAWIE</span> EKRANÓW
-            </motion.h2>
+            </h2>
 
-            <motion.p 
-              className="mb-6 text-lg leading-relaxed text-muted-foreground"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
+            <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
               <span className="text-primary font-semibold animate-glow">ScreenHero</span> to zespół pasjonatów 
               technologii z wieloletnim doświadczeniem w naprawie monitorów i telewizorów. 
               Specjalizujemy się w kompleksowej diagnostyce i naprawie wszelkich usterek 
               związanych z ekranami.
-            </motion.p>
+            </p>
 
-            <motion.p 
-              className="mb-8 text-muted-foreground"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
+            <p className="mb-8 text-muted-foreground">
               Naszą misją jest przywracanie życia uszkodzonym urządzeniom. Działamy szybko, 
               profesjonalnie i zawsze z myślą o satysfakcji klienta. Każda naprawa objęta 
               jest gwarancją, a bezpłatna diagnostyka pozwala poznać koszt naprawy przed 
               podjęciem decyzji.
-            </motion.p>
+            </p>
 
-            {/* Features List */}
+            {/* Features List - simplified, single container animation */}
             <motion.div 
               className="grid gap-3 sm:grid-cols-2"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
             >
               {features.map((feature, index) => (
-                <motion.div 
-                  key={index} 
-                  className="flex items-center gap-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.08 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                >
+                <div key={index} className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
                   <span className="text-sm text-foreground">{feature}</span>
-                </motion.div>
+                </div>
               ))}
             </motion.div>
 
-            {/* Stats Grid on Mobile */}
-            <motion.div 
-              className="mt-8 grid gap-4 sm:grid-cols-3 lg:hidden"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true, amount: 0.3 }}
-            >
+            {/* Stats Grid on Mobile - CSS hover only */}
+            <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:hidden">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <motion.div 
+                  <div 
                     key={index} 
-                    className="rounded border border-border/50 bg-background/50 p-4 text-center backdrop-blur-sm"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                    viewport={{ once: true, amount: 0.3 }}
+                    className="rounded border border-border/50 bg-background/50 p-4 text-center transition-transform duration-200 hover:scale-105"
                   >
                     <Icon className="mx-auto mb-2 h-6 w-6 text-secondary" />
                     <div className="font-[family-name:var(--font-display)] text-xl font-bold text-primary">
@@ -193,10 +132,10 @@ export function About() {
                     <div className="text-xs text-muted-foreground">
                       {stat.label}
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
