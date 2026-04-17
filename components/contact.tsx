@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -68,35 +69,81 @@ export function Contact() {
 
       <div className="relative mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-24">
         {/* Section Header */}
-        <div className="mb-12 text-center lg:mb-16">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2">
+        <motion.div 
+          className="mb-12 text-center lg:mb-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div 
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <span className="text-sm font-medium uppercase tracking-wider text-primary">
               Kontakt
             </span>
-          </div>
-          <h2 className="mb-3 font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-foreground md:mb-4 md:text-5xl">
-            SKONTAKTUJ SIĘ <span className="text-secondary">Z NAMI</span>
-          </h2>
-          <p className="mx-auto max-w-2xl text-sm md:text-lg text-muted-foreground">
+          </motion.div>
+          <motion.h2 
+            className="mb-3 font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-foreground md:mb-4 md:text-5xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            SKONTAKTUJ SIĘ <span className="text-secondary animate-glowCyan">Z NAMI</span>
+          </motion.h2>
+          <motion.p 
+            className="mx-auto max-w-2xl text-sm md:text-lg text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             Masz pytanie? Zadzwoń lub napisz — odpowiemy szybko.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid gap-8 lg:gap-12 lg:grid-cols-2">
+        <motion.div 
+          className="grid gap-8 lg:gap-12 lg:grid-cols-2"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {/* Contact Info */}
-          <div>
-            <h3 className="mb-6 font-[family-name:var(--font-display)] text-2xl font-bold text-foreground">
-              DANE <span className="text-primary">KONTAKTOWE</span>
-            </h3>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <motion.h3 
+              className="mb-6 font-[family-name:var(--font-display)] text-2xl font-bold text-foreground"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              DANE <span className="text-primary animate-glow">KONTAKTOWE</span>
+            </motion.h3>
 
             <div className="space-y-4">
               {contactInfo.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                  <a
+                  <motion.a
                     key={index}
                     href={item.href}
                     className="group flex items-start gap-4 rounded border border-border/50 bg-background/50 p-4 backdrop-blur-sm transition-all hover:border-primary/50 hover:bg-primary/5"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 + index * 0.08 }}
+                    whileHover={{ scale: 1.02, x: 5 }}
+                    viewport={{ once: true, amount: 0.3 }}
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded border border-primary/30 bg-primary/10">
                       <Icon className="h-5 w-5 text-primary" />
@@ -109,13 +156,20 @@ export function Contact() {
                         {item.value}
                       </div>
                     </div>
-                  </a>
+                  </motion.a>
                 );
               })}
             </div>
 
             {/* Shop Photo - Hidden on mobile */}
-            <div className="relative hidden mt-8 aspect-video overflow-hidden rounded border border-border/50 lg:block">
+            <motion.div 
+              className="relative hidden mt-8 aspect-video overflow-hidden rounded border border-border/50 lg:block"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              whileHover={{ scale: 1.02 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Image
                 src="/images/contact-shop.jpg"
                 alt="Serwis ScreenHero - nasze sklepy w Bydgoszczy i Poznaniu"
@@ -129,16 +183,34 @@ export function Contact() {
                   Bydgoszcz & Poznań
                 </span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Contact Form */}
-          <div>
-            <h3 className="mb-6 font-[family-name:var(--font-display)] text-2xl font-bold text-foreground">
-              WYŚLIJ <span className="text-secondary">WIADOMOŚĆ</span>
-            </h3>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <motion.h3 
+              className="mb-6 font-[family-name:var(--font-display)] text-2xl font-bold text-foreground"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              WYŚLIJ <span className="text-secondary animate-glowCyan">WIADOMOŚĆ</span>
+            </motion.h3>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <motion.form 
+              onSubmit={handleSubmit} 
+              className="space-y-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
                   <label className="mb-2 block text-sm font-medium uppercase tracking-wider text-muted-foreground">
@@ -200,9 +272,9 @@ export function Contact() {
                 <Send className="mr-2 h-5 w-5" />
                 Wyślij wiadomość
               </Button>
-            </form>
-          </div>
-        </div>
+            </motion.form>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
