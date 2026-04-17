@@ -11,8 +11,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefon",
-    value: "+48 123 456 789",
-    href: "tel:+48123456789",
+    value: "+48 509 273 694",
+    href: "tel:+48509273694",
   },
   {
     icon: Mail,
@@ -22,14 +22,14 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: "Adres",
-    value: "ul. Techniczna 42, 00-001 Warszawa",
+    label: "Lokalizacja",
+    value: "Bydgoszcz & Poznań",
     href: "#",
   },
   {
     icon: Clock,
     label: "Godziny otwarcia",
-    value: "Pon-Pt: 8:00-18:00, Sob: 9:00-14:00",
+    value: "Pon-Pt: 9:00-18:00, Sob: 10:00-15:00",
     href: "#",
   },
 ];
@@ -118,7 +118,7 @@ export function Contact() {
             <div className="relative mt-8 aspect-video overflow-hidden rounded border border-border/50">
               <Image
                 src="/images/contact-shop.jpg"
-                alt="Serwis ScreenHero - nasz sklep przy ul. Technicznej 42"
+                alt="Serwis ScreenHero - nasze sklepy w Bydgoszczy i Poznaniu"
                 fill
                 className="object-cover"
               />
@@ -126,7 +126,7 @@ export function Contact() {
               <div className="absolute bottom-4 left-4 flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
                 <span className="font-[family-name:var(--font-display)] text-sm font-bold text-foreground">
-                  ul. Techniczna 42, Warszawa
+                  Bydgoszcz & Poznań
                 </span>
               </div>
             </div>
