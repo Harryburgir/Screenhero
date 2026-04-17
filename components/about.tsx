@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { CheckCircle2, Users, Award, Cpu } from "lucide-react";
 
 const features = [
@@ -35,64 +36,43 @@ export function About() {
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          {/* Left Column - Image/Visual */}
+          {/* Left Column - Photo */}
           <div className="relative">
-            <div className="relative aspect-square overflow-hidden rounded border border-border/50 bg-background p-8">
-              {/* Tech Grid Background */}
-              <div 
-                className="absolute inset-0 opacity-20"
-                style={{
-                  backgroundImage: `
-                    linear-gradient(rgba(252, 224, 30, 0.3) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(252, 224, 30, 0.3) 1px, transparent 1px)
-                  `,
-                  backgroundSize: '30px 30px',
-                }}
+            <div className="relative overflow-hidden rounded border border-border/50">
+              <Image
+                src="/images/about-team.jpg"
+                alt="Technik ScreenHero przy pracy nad naprawą ekranu"
+                width={600}
+                height={600}
+                className="w-full object-cover"
               />
-              
-              {/* Central Display */}
-              <div className="relative flex h-full flex-col items-center justify-center">
-                <div className="relative mb-6">
-                  <div className="absolute -inset-4 rounded-full bg-primary/30 blur-2xl" />
-                  <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-2 border-primary bg-background">
-                    <span className="font-[family-name:var(--font-display)] text-5xl font-bold text-primary">SH</span>
-                  </div>
-                </div>
-                
-                <h3 className="mb-2 font-[family-name:var(--font-display)] text-2xl font-bold text-foreground">
-                  SCREEN<span className="text-secondary">HERO</span>
-                </h3>
-                <p className="text-center text-sm text-muted-foreground">
-                  Twój zaufany partner w naprawie ekranów
-                </p>
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
 
-                {/* Stats Row */}
-                <div className="mt-8 grid w-full grid-cols-3 gap-4">
-                  {stats.map((stat, index) => {
-                    const Icon = stat.icon;
-                    return (
-                      <div key={index} className="text-center">
-                        <Icon className="mx-auto mb-2 h-6 w-6 text-secondary" />
-                        <div className="font-[family-name:var(--font-display)] text-xl font-bold text-primary">
-                          {stat.value}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {stat.label}
-                        </div>
+              {/* Stats overlay at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 grid grid-cols-3 gap-px bg-border/30 backdrop-blur-sm">
+                {stats.map((stat, index) => {
+                  const Icon = stat.icon;
+                  return (
+                    <div key={index} className="bg-background/70 p-4 text-center backdrop-blur-sm">
+                      <Icon className="mx-auto mb-1 h-5 w-5 text-secondary" />
+                      <div className="font-[family-name:var(--font-display)] text-lg font-bold text-primary">
+                        {stat.value}
                       </div>
-                    );
-                  })}
-                </div>
+                      <div className="text-xs text-muted-foreground">
+                        {stat.label}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
 
               {/* Corner Accents */}
               <div className="absolute left-0 top-0 h-8 w-8 border-l-2 border-t-2 border-primary" />
               <div className="absolute right-0 top-0 h-8 w-8 border-r-2 border-t-2 border-secondary" />
-              <div className="absolute bottom-0 left-0 h-8 w-8 border-b-2 border-l-2 border-secondary" />
-              <div className="absolute bottom-0 right-0 h-8 w-8 border-b-2 border-r-2 border-primary" />
             </div>
 
-            {/* Floating Elements */}
+            {/* Floating glow */}
             <div className="absolute -left-4 -top-4 h-24 w-24 rounded bg-primary/20 blur-3xl" />
             <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded bg-secondary/20 blur-3xl" />
           </div>

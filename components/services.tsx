@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Monitor, Tv, Smartphone, Wrench, RefreshCcw, Search, ArrowRight } from "lucide-react";
 
 const services = [
@@ -9,6 +10,7 @@ const services = [
     description: "Naprawa uszkodzonych matryc LCD, LED. Wymiana podświetlenia, naprawa zasilacza i płyty głównej.",
     features: ["Wszystkie marki", "Diagnostyka gratis", "Realizacja 24-48h"],
     color: "primary",
+    image: "/images/service-monitor.jpg",
   },
   {
     icon: Tv,
@@ -16,6 +18,7 @@ const services = [
     description: "Kompleksowa naprawa TV LCD, LED, QLED. Smart TV wszystkich producentów.",
     features: ["Samsung, LG, Sony", "Naprawa u klienta", "Gwarancja 24 msc"],
     color: "secondary",
+    image: "/images/service-tv.jpg",
   },
   {
     icon: RefreshCcw,
@@ -23,6 +26,7 @@ const services = [
     description: "Profesjonalna wymiana uszkodzonych ekranów na nowe, oryginalne części zamienne.",
     features: ["Oryginalne części", "Szybka wymiana", "Test jakości"],
     color: "accent",
+    image: "/images/service-matrix.jpg",
   },
   {
     icon: Search,
@@ -30,6 +34,7 @@ const services = [
     description: "Dokładna diagnostyka usterki z wykorzystaniem profesjonalnego sprzętu pomiarowego.",
     features: ["Bezpłatna wycena", "Raport usterek", "Konsultacja"],
     color: "primary",
+    image: "/images/service-diagnostics.jpg",
   },
   {
     icon: Smartphone,
@@ -37,6 +42,7 @@ const services = [
     description: "Naprawa i wymiana ekranów dotykowych, digitizerów, paneli sterowania.",
     features: ["Kalibracja touch", "Wymiana digitizera", "Naprawa złącz"],
     color: "secondary",
+    image: "/images/service-touch.jpg",
   },
   {
     icon: Wrench,
@@ -44,6 +50,7 @@ const services = [
     description: "Kompleksowy serwis urządzeń po gwarancji producenta. Naprawa każdego modelu.",
     features: ["Każdy producent", "Części zamienne", "Konkurencyjne ceny"],
     color: "accent",
+    image: "/images/service-warranty.jpg",
   },
 ];
 
@@ -104,44 +111,53 @@ export function Services() {
             return (
               <div
                 key={index}
-                className={`group relative overflow-hidden rounded border ${colors.border} ${colors.bg} p-6 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02]`}
+                className={`group relative overflow-hidden rounded border ${colors.border} backdrop-blur-sm transition-all duration-300 hover:scale-[1.02]`}
               >
-                {/* Glow Effect */}
-                <div className={`absolute -right-8 -top-8 h-32 w-32 rounded-full ${colors.glow} blur-3xl opacity-0 transition-opacity group-hover:opacity-100`} />
-                
-                {/* Icon */}
-                <div className={`mb-4 inline-flex h-14 w-14 items-center justify-center rounded border border-current/20 ${colors.bg}`}>
-                  <Icon className={`h-7 w-7 ${colors.icon}`} />
+                {/* Card Image */}
+                <div className="relative h-40 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
+                  {/* Icon on top of image */}
+                  <div className={`absolute bottom-3 left-4 inline-flex h-12 w-12 items-center justify-center rounded border border-current/30 bg-background/70 backdrop-blur-sm`}>
+                    <Icon className={`h-6 w-6 ${colors.icon}`} />
+                  </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="mb-2 font-[family-name:var(--font-display)] text-xl font-bold text-foreground">
-                  {service.title}
-                </h3>
-                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-                  {service.description}
-                </p>
+                <div className={`${colors.bg} p-6`}>
+                  {/* Glow Effect */}
+                  <div className={`absolute -right-8 top-0 h-32 w-32 rounded-full ${colors.glow} blur-3xl opacity-0 transition-opacity group-hover:opacity-100`} />
 
-                {/* Features */}
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {service.features.map((feature, i) => (
-                    <span
-                      key={i}
-                      className={`rounded px-2 py-1 text-xs font-medium ${colors.badge}`}
-                    >
-                      {feature}
-                    </span>
-                  ))}
+                  <h3 className="mb-2 font-[family-name:var(--font-display)] text-xl font-bold text-foreground">
+                    {service.title}
+                  </h3>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                    {service.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="mb-4 flex flex-wrap gap-2">
+                    {service.features.map((feature, i) => (
+                      <span
+                        key={i}
+                        className={`rounded px-2 py-1 text-xs font-medium ${colors.badge}`}
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Link */}
+                  <button className={`inline-flex items-center gap-1 text-sm font-medium ${colors.icon} transition-all group-hover:gap-2`}>
+                    Dowiedz się więcej
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
                 </div>
-
-                {/* Link */}
-                <button className={`inline-flex items-center gap-1 text-sm font-medium ${colors.icon} transition-all group-hover:gap-2`}>
-                  Dowiedz się więcej
-                  <ArrowRight className="h-4 w-4" />
-                </button>
-
-                {/* Corner Accent */}
-                <div className={`absolute bottom-0 right-0 h-16 w-16 ${colors.glow} blur-2xl`} />
               </div>
             );
           })}

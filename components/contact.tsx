@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -113,16 +114,20 @@ export function Contact() {
               })}
             </div>
 
-            {/* Map Placeholder */}
-            <div className="mt-8 aspect-video overflow-hidden rounded border border-border/50 bg-background/50">
-              <div className="flex h-full items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="mx-auto mb-2 h-12 w-12 text-primary/50" />
-                  <p className="text-sm text-muted-foreground">Lokalizacja na mapie</p>
-                  <p className="font-[family-name:var(--font-display)] text-xs text-primary">
-                    ul. Techniczna 42, Warszawa
-                  </p>
-                </div>
+            {/* Shop Photo */}
+            <div className="relative mt-8 aspect-video overflow-hidden rounded border border-border/50">
+              <Image
+                src="/images/contact-shop.jpg"
+                alt="Serwis ScreenHero - nasz sklep przy ul. Technicznej 42"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+              <div className="absolute bottom-4 left-4 flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span className="font-[family-name:var(--font-display)] text-sm font-bold text-foreground">
+                  ul. Techniczna 42, Warszawa
+                </span>
               </div>
             </div>
           </div>
