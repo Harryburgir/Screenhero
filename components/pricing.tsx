@@ -84,7 +84,7 @@ export function Pricing() {
         </motion.div>
 
         {submitted ? (
-          /* Success State - simplified animation */}
+          /* Success State */
           <motion.div 
             className="relative overflow-hidden rounded border border-primary/50 bg-primary/5 p-12 text-center"
             initial={{ opacity: 0, scale: 0.95 }}
