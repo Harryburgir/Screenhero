@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { CheckCircle2, Users, Award, Cpu } from "lucide-react";
 
 const features = [
@@ -36,40 +35,23 @@ export function About() {
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          {/* Left Column - Photo */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded border border-border/50">
-              <Image
-                src="/images/about-team.jpg"
-                alt="Technik ScreenHero przy pracy nad naprawą ekranu"
-                width={600}
-                height={600}
-                className="w-full object-cover"
-              />
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-
-              {/* Stats overlay at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 grid grid-cols-3 gap-px bg-border/30 backdrop-blur-sm">
-                {stats.map((stat, index) => {
-                  const Icon = stat.icon;
-                  return (
-                    <div key={index} className="bg-background/70 p-4 text-center backdrop-blur-sm">
-                      <Icon className="mx-auto mb-1 h-5 w-5 text-secondary" />
-                      <div className="font-[family-name:var(--font-display)] text-lg font-bold text-primary">
-                        {stat.value}
-                      </div>
-                      <div className="text-xs text-muted-foreground">
-                        {stat.label}
-                      </div>
+          {/* Left Column - Stats Cards */}
+          <div className="hidden lg:block">
+            <div className="grid gap-4">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="rounded border border-border/50 bg-background/50 p-6 backdrop-blur-sm">
+                    <Icon className="mb-3 h-8 w-8 text-primary" />
+                    <div className="font-[family-name:var(--font-display)] text-3xl font-bold text-primary">
+                      {stat.value}
                     </div>
-                  );
-                })}
-              </div>
-
-              {/* Corner Accents */}
-              <div className="absolute left-0 top-0 h-8 w-8 border-l-2 border-t-2 border-primary" />
-              <div className="absolute right-0 top-0 h-8 w-8 border-r-2 border-t-2 border-secondary" />
+                    <div className="text-sm text-muted-foreground">
+                      {stat.label}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             {/* Floating glow */}
@@ -111,6 +93,24 @@ export function About() {
                   <span className="text-sm text-foreground">{feature}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Stats Grid on Mobile */}
+            <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:hidden">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="rounded border border-border/50 bg-background/50 p-4 text-center backdrop-blur-sm">
+                    <Icon className="mx-auto mb-2 h-6 w-6 text-secondary" />
+                    <div className="font-[family-name:var(--font-display)] text-xl font-bold text-primary">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      {stat.label}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
