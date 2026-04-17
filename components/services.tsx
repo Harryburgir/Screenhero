@@ -113,26 +113,25 @@ export function Services() {
                 key={index}
                 className={`group relative overflow-hidden rounded border ${colors.border} backdrop-blur-sm transition-all duration-300 hover:scale-[1.02]`}
               >
-                {/* Card Image - Hidden on mobile, visible on md+ */}
-                <div className="relative hidden h-32 overflow-hidden md:block">
+                {/* Card Image */}
+                <div className="relative h-28 overflow-hidden md:h-36">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/95" />
+                  {/* Icon badge over image */}
+                  <div className={`absolute bottom-2 left-3 inline-flex h-9 w-9 items-center justify-center rounded border border-white/20 bg-background/70 backdrop-blur-sm`}>
+                    <Icon className={`h-4 w-4 ${colors.icon}`} />
+                  </div>
                 </div>
 
                 {/* Content */}
-                <div className={`${colors.bg} p-4 md:p-6`}>
+                <div className={`${colors.bg} p-4 md:p-5`}>
                   {/* Glow Effect */}
                   <div className={`absolute -right-8 top-0 h-32 w-32 rounded-full ${colors.glow} blur-3xl opacity-0 transition-opacity group-hover:opacity-100`} />
-
-                  {/* Icon on mobile */}
-                  <div className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded border border-current/20 md:hidden`}>
-                    <Icon className={`h-5 w-5 ${colors.icon}`} />
-                  </div>
 
                   <h3 className="mb-2 font-[family-name:var(--font-display)] text-lg md:text-xl font-bold text-foreground">
                     {service.title}
