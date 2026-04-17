@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Monitor, Tv, Send, ChevronDown, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -60,54 +61,108 @@ export function Pricing() {
 
       <div className="relative mx-auto max-w-3xl px-4 lg:px-8">
         {/* Section Header */}
-        <div className="mb-12 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-4 py-2">
+        <motion.div 
+          className="mb-12 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div 
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-4 py-2"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <Zap className="h-4 w-4 text-accent" />
             <span className="text-sm font-medium uppercase tracking-wider text-accent">
               Bezpłatna wycena
             </span>
-          </div>
-          <h2 className="mb-4 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            ZGŁOŚ <span className="text-primary">USTERKĘ</span>
-          </h2>
-          <p className="mx-auto max-w-xl text-lg text-muted-foreground">
+          </motion.div>
+          <motion.h2 
+            className="mb-4 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-foreground md:text-5xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            ZGŁOŚ <span className="text-primary animate-glow">USTERKĘ</span>
+          </motion.h2>
+          <motion.p 
+            className="mx-auto max-w-xl text-lg text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             Wypełnij formularz, a nasz technik skontaktuje się z Tobą w ciągu{" "}
-            <span className="font-semibold text-primary">1 godziny</span> z bezpłatną wyceną.
-          </p>
-        </div>
+            <span className="font-semibold text-primary animate-glow">1 godziny</span> z bezpłatną wyceną.
+          </motion.p>
+        </motion.div>
 
         {submitted ? (
           /* Success State */
-          <div className="relative overflow-hidden rounded border border-primary/50 bg-primary/5 p-12 text-center">
+          <motion.div 
+            className="relative overflow-hidden rounded border border-primary/50 bg-primary/5 p-12 text-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="absolute inset-0 bg-primary/5" />
-            <div className="relative">
-              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-primary bg-primary/10">
+            <motion.div 
+              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <motion.div 
+                className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-primary bg-primary/10"
+                animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
                 <Zap className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="mb-3 font-[family-name:var(--font-display)] text-2xl font-bold text-primary">
+              </motion.div>
+              <motion.h3 
+                className="mb-3 font-[family-name:var(--font-display)] text-2xl font-bold text-primary animate-glow"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
                 ZGŁOSZENIE PRZYJĘTE
-              </h3>
-              <p className="mb-6 text-muted-foreground">
+              </motion.h3>
+              <motion.p 
+                className="mb-6 text-muted-foreground"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
                 Otrzymaliśmy Twoje zgłoszenie. Nasz technik skontaktuje się z Tobą
                 w ciągu <span className="font-semibold text-foreground">1 godziny</span>.
-              </p>
-              <button
+              </motion.p>
+              <motion.button
                 onClick={() => {
                   setSubmitted(false);
                   setSelectedDevice("");
                   setFormData({ model: "", fault: "", faultDescription: "", name: "", phone: "", email: "" });
                 }}
                 className="text-sm font-medium uppercase tracking-wider text-secondary hover:text-secondary/80 underline underline-offset-4"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Wyślij nowe zgłoszenie
-              </button>
-            </div>
-          </div>
+              </motion.button>
+            </motion.div>
+          </motion.div>
         ) : (
           /* Form */
-          <form
+          <motion.form
             onSubmit={handleSubmit}
             className="space-y-6 rounded border border-border/50 bg-background/60 p-8 backdrop-blur-sm"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             {/* Step 1: Device Type */}
             <div>
@@ -251,10 +306,16 @@ export function Pricing() {
               Wyślij zgłoszenie — bezpłatna wycena
             </Button>
 
-            <p className="text-center text-xs text-muted-foreground">
+            <motion.p 
+              className="text-center text-xs text-muted-foreground"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               Diagnostyka i wycena zawsze bezpłatna. Naprawę realizujemy tylko po Twojej akceptacji.
-            </p>
-          </form>
+            </motion.p>
+          </motion.form>
         )}
       </div>
     </section>
