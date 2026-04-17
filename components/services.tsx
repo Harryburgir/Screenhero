@@ -113,8 +113,8 @@ export function Services() {
                 key={index}
                 className={`group relative overflow-hidden rounded border ${colors.border} backdrop-blur-sm transition-all duration-300 hover:scale-[1.02]`}
               >
-                {/* Card Image */}
-                <div className="relative h-40 overflow-hidden">
+                {/* Card Image - Hidden on mobile, visible on md+ */}
+                <div className="relative hidden h-32 overflow-hidden md:block">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -122,30 +122,31 @@ export function Services() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
-                  {/* Icon on top of image */}
-                  <div className={`absolute bottom-3 left-4 inline-flex h-12 w-12 items-center justify-center rounded border border-current/30 bg-background/70 backdrop-blur-sm`}>
-                    <Icon className={`h-6 w-6 ${colors.icon}`} />
-                  </div>
                 </div>
 
                 {/* Content */}
-                <div className={`${colors.bg} p-6`}>
+                <div className={`${colors.bg} p-4 md:p-6`}>
                   {/* Glow Effect */}
                   <div className={`absolute -right-8 top-0 h-32 w-32 rounded-full ${colors.glow} blur-3xl opacity-0 transition-opacity group-hover:opacity-100`} />
 
-                  <h3 className="mb-2 font-[family-name:var(--font-display)] text-xl font-bold text-foreground">
+                  {/* Icon on mobile */}
+                  <div className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded border border-current/20 md:hidden`}>
+                    <Icon className={`h-5 w-5 ${colors.icon}`} />
+                  </div>
+
+                  <h3 className="mb-2 font-[family-name:var(--font-display)] text-lg md:text-xl font-bold text-foreground">
                     {service.title}
                   </h3>
-                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mb-3 text-xs md:text-sm leading-relaxed text-muted-foreground">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <div className="mb-4 flex flex-wrap gap-2">
+                  <div className="mb-3 flex flex-wrap gap-1 md:gap-2">
                     {service.features.map((feature, i) => (
                       <span
                         key={i}
-                        className={`rounded px-2 py-1 text-xs font-medium ${colors.badge}`}
+                        className={`rounded px-2 py-0.5 text-xs font-medium ${colors.badge}`}
                       >
                         {feature}
                       </span>
@@ -153,9 +154,9 @@ export function Services() {
                   </div>
 
                   {/* Link */}
-                  <button className={`inline-flex items-center gap-1 text-sm font-medium ${colors.icon} transition-all group-hover:gap-2`}>
-                    Dowiedz się więcej
-                    <ArrowRight className="h-4 w-4" />
+                  <button className={`inline-flex items-center gap-1 text-xs md:text-sm font-medium ${colors.icon} transition-all group-hover:gap-2`}>
+                    Więcej
+                    <ArrowRight className="h-3 w-3 md:h-4 md:w-4" />
                   </button>
                 </div>
               </div>

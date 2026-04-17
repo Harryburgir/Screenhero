@@ -66,23 +66,23 @@ export function Contact() {
       <div className="absolute right-0 top-1/4 h-96 w-96 rounded-full bg-primary/10 blur-[150px]" />
       <div className="absolute bottom-1/4 left-0 h-72 w-72 rounded-full bg-secondary/10 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-24">
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center lg:mb-16">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2">
             <span className="text-sm font-medium uppercase tracking-wider text-primary">
               Kontakt
             </span>
           </div>
-          <h2 className="mb-4 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+          <h2 className="mb-3 font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-foreground md:mb-4 md:text-5xl">
             SKONTAKTUJ SIĘ <span className="text-secondary">Z NAMI</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Masz pytanie? Potrzebujesz wyceny? Napisz lub zadzwoń - odpowiemy najszybciej jak to możliwe.
+          <p className="mx-auto max-w-2xl text-sm md:text-lg text-muted-foreground">
+            Masz pytanie? Zadzwoń lub napisz — odpowiemy szybko.
           </p>
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2">
+        <div className="grid gap-8 lg:gap-12 lg:grid-cols-2">
           {/* Contact Info */}
           <div>
             <h3 className="mb-6 font-[family-name:var(--font-display)] text-2xl font-bold text-foreground">
@@ -114,8 +114,8 @@ export function Contact() {
               })}
             </div>
 
-            {/* Shop Photo */}
-            <div className="relative mt-8 aspect-video overflow-hidden rounded border border-border/50">
+            {/* Shop Photo - Hidden on mobile */}
+            <div className="relative hidden mt-8 aspect-video overflow-hidden rounded border border-border/50 lg:block">
               <Image
                 src="/images/contact-shop.jpg"
                 alt="Serwis ScreenHero - nasze sklepy w Bydgoszczy i Poznaniu"
