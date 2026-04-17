@@ -104,7 +104,7 @@ const services: Service[] = [
     modalDescription:
       "Profesjonalna diagnostyka to fundament każdej skutecznej naprawy. Korzystamy z oscyloskopów cyfrowych, mierników ESR, testerów matryc oraz autorskiego oprogramowania diagnostycznego. Każdy klient otrzymuje szczegółowy raport z opisem usterki, wykazem uszkodzonych podzespołów oraz jasnym kosztorysem naprawy — bez ukrytych opłat. Diagnostyka jest w pełni bezpłatna, niezależnie od wyniku.",
     modalSteps: [
-      "Wst��pna ocena wizualna obudowy i złącz sygnałowych",
+      "Wstępna ocena wizualna obudowy i złącz sygnałowych",
       "Pomiary napięć zasilających i testowanie zasilacza",
       "Analiza sygnału matrycy i weryfikacja płyty T-CON",
       "Testy płyty głównej i modułów komunikacyjnych (Wi-Fi, HDMI)",
@@ -194,9 +194,9 @@ export function Services() {
 
   return (
     <section id="uslugi" className="relative bg-background py-24">
-      {/* Background Elements - reduced blur */}
-      <div className="absolute left-0 top-1/4 h-64 w-64 rounded-full bg-secondary/8 blur-[50px]" />
-      <div className="absolute bottom-1/4 right-0 h-64 w-64 rounded-full bg-primary/8 blur-[50px]" />
+      {/* Background Elements */}
+      <div className="absolute left-0 top-1/4 h-64 w-64 rounded-full bg-secondary/10 blur-[100px]" />
+      <div className="absolute bottom-1/4 right-0 h-64 w-64 rounded-full bg-primary/10 blur-[100px]" />
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         {/* Section Header */}
@@ -239,12 +239,12 @@ export function Services() {
           </motion.p>
         </motion.div>
 
-        {/* Services Grid - optimized with CSS transitions for hover */}
+        {/* Services Grid */}
         <motion.div 
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.1 }}
         >
           {services.map((service, index) => {
@@ -254,10 +254,11 @@ export function Services() {
             return (
               <motion.div
                 key={index}
-                className={`group relative overflow-hidden rounded border ${colors.border} transition-all duration-200 hover:scale-[1.02] hover:-translate-y-1`}
-                initial={{ opacity: 0, y: 15 }}
+                className={`group relative overflow-hidden rounded border ${colors.border} backdrop-blur-sm transition-all duration-300 hover:scale-[1.02]`}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02, y: -5 }}
                 viewport={{ once: true, amount: 0.2 }}
               >
                 {/* Card Image */}
@@ -277,8 +278,8 @@ export function Services() {
 
                 {/* Content */}
                 <div className={`${colors.bg} p-4 md:p-5`}>
-                  {/* Glow Effect - reduced blur */}
-                  <div className={`absolute -right-8 top-0 h-24 w-24 rounded-full ${colors.glow} blur-xl opacity-0 transition-opacity group-hover:opacity-100`} />
+                  {/* Glow Effect */}
+                  <div className={`absolute -right-8 top-0 h-32 w-32 rounded-full ${colors.glow} blur-3xl opacity-0 transition-opacity group-hover:opacity-100`} />
 
                   <h3 className="mb-2 font-[family-name:var(--font-display)] text-lg md:text-xl font-bold text-foreground">
                     {service.title}
