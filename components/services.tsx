@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Monitor, Tv, Smartphone, Wrench, RefreshCcw, Search, ArrowRight } from "lucide-react";
+import { Monitor, Tv, Smartphone, Wrench, RefreshCcw, Search, ArrowRight, X } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -322,7 +322,7 @@ export function Services() {
             const Icon = selectedService.icon;
             return (
               <>
-                {/* Top image strip */}
+                {/* Top image strip with close button */}
                 <div className="relative h-36 overflow-hidden">
                   <Image
                     src={selectedService.image}
@@ -331,6 +331,16 @@ export function Services() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+                  
+                  {/* Close button - large and mobile-friendly */}
+                  <button
+                    onClick={() => setSelectedService(null)}
+                    className="absolute top-3 left-3 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm text-white transition-all hover:bg-black/80 active:scale-95"
+                    aria-label="Zamknij"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+
                   <div className={`absolute bottom-3 left-5 inline-flex h-10 w-10 items-center justify-center rounded border border-white/20 bg-background/70 backdrop-blur-sm`}>
                     <Icon className={`h-5 w-5 ${colors.icon}`} />
                   </div>
