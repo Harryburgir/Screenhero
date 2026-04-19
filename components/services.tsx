@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Monitor, Tv, Smartphone, Wrench, RefreshCcw, Search, ArrowRight } from "lucide-react";
+import { Monitor, Tv, Smartphone, Wrench, RefreshCcw, Search, ArrowRight, X } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -316,13 +316,13 @@ export function Services() {
 
       {/* Service Detail Modal */}
       <Dialog open={!!selectedService} onOpenChange={(open) => { if (!open) setSelectedService(null); }}>
-        <DialogContent className="max-w-lg border-border/60 bg-background p-0 overflow-hidden">
+        <DialogContent className="max-w-lg border-border/60 bg-background p-0 overflow-hidden [&>[data-slot=dialog-close]]:z-20 [&>[data-slot=dialog-close]]:text-white [&>[data-slot=dialog-close]]:opacity-90 [&>[data-slot=dialog-close]]:hover:opacity-100">
           {selectedService && (() => {
             const colors = colorMap[selectedService.color as keyof typeof colorMap];
             const Icon = selectedService.icon;
             return (
               <>
-                {/* Top image strip */}
+                {/* Top image strip with close button */}
                 <div className="relative h-36 overflow-hidden">
                   <Image
                     src={selectedService.image}
@@ -331,6 +331,16 @@ export function Services() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+                  
+                  {/* Close button - large and mobile-friendly */}
+                  <button
+                    onClick={() => setSelectedService(null)}
+                    className="absolute top-3 left-3 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 backdrop-blur-sm text-white transition-all hover:bg-black/80 active:scale-95"
+                    aria-label="Zamknij"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+
                   <div className={`absolute bottom-3 left-5 inline-flex h-10 w-10 items-center justify-center rounded border border-white/20 bg-background/70 backdrop-blur-sm`}>
                     <Icon className={`h-5 w-5 ${colors.icon}`} />
                   </div>
@@ -393,6 +403,14 @@ export function Services() {
                     className={`mt-4 w-full rounded border ${colors.border} ${colors.bg} py-3 font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-wider ${colors.icon} transition-all hover:opacity-80`}
                   >
                     Zgłoś usterkę — bezpłatna wycena
+                  </button>
+
+                  {/* Close button */}
+                  <button
+                    onClick={() => setSelectedService(null)}
+                    className="mt-4 w-full rounded-md bg-secondary/20 py-3 font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-widest text-secondary transition-all duration-200 hover:bg-secondary/30 active:scale-95 border border-secondary/40"
+                  >
+                    Zamknij
                   </button>
                 </div>
               </>
