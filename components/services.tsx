@@ -404,6 +404,14 @@ export function Services() {
                   >
                     Zgłoś usterkę — bezpłatna wycena
                   </button>
+
+                  {/* Close button */}
+                  <button
+                    onClick={() => setSelectedService(null)}
+                    className="mt-3 w-full rounded border border-border/40 bg-muted/40 py-2.5 font-[family-name:var(--font-display)] text-sm font-semibold uppercase tracking-wider text-muted-foreground transition-all hover:bg-muted/60 active:scale-95"
+                  >
+                    Zamknij
+                  </button>
                 </div>
               </>
             );
