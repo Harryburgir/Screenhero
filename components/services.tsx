@@ -408,7 +408,7 @@ export function Services() {
                   {/* Close button */}
                   <button
                     onClick={() => setSelectedService(null)}
-                    className="mt-3 w-full rounded border border-border/40 bg-muted/40 py-2.5 font-[family-name:var(--font-display)] text-sm font-semibold uppercase tracking-wider text-muted-foreground transition-all hover:bg-muted/60 active:scale-95"
+                    className="mt-4 w-full rounded-md bg-secondary/20 py-3 font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-widest text-secondary transition-all duration-200 hover:bg-secondary/30 active:scale-95 border border-secondary/40"
                   >
                     Zamknij
                   </button>
