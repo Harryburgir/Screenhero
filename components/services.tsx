@@ -316,7 +316,7 @@ export function Services() {
 
       {/* Service Detail Modal */}
       <Dialog open={!!selectedService} onOpenChange={(open) => { if (!open) setSelectedService(null); }}>
-        <DialogContent className="max-w-lg border-border/60 bg-background p-0 overflow-hidden">
+        <DialogContent className="max-w-lg border-border/60 bg-background p-0 overflow-hidden [&>[data-slot=dialog-close]]:z-20 [&>[data-slot=dialog-close]]:text-white [&>[data-slot=dialog-close]]:opacity-90 [&>[data-slot=dialog-close]]:hover:opacity-100">
           {selectedService && (() => {
             const colors = colorMap[selectedService.color as keyof typeof colorMap];
             const Icon = selectedService.icon;
