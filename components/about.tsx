@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Users, Award, Cpu } from "lucide-react";
+import { CheckCircle2, Heart, Award, Cpu } from "lucide-react";
 
 const features = [
-  "Certyfikowani technicy z wieloletnim doświadczeniem",
+  "Certyfikowany specjalista z wieloletnim doświadczeniem",
   "Tylko oryginalne części zamienne",
   "Bezpłatna diagnostyka i wycena",
   "Gwarancja na wszystkie naprawy",
@@ -13,7 +13,7 @@ const features = [
 ];
 
 const stats = [
-  { icon: Users, value: "10 000+", label: "Zadowolonych klientów" },
+  { icon: Heart, value: "2 500+", label: "Zadowolonych klientów" },
   { icon: Award, value: "15+", label: "Lat doświadczenia" },
   { icon: Cpu, value: "98%", label: "Skuteczność napraw" },
 ];
@@ -83,21 +83,21 @@ export function About() {
             </div>
 
             <h2 className="mb-6 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-              EKSPERCI W <span className="text-secondary animate-glowCyan">NAPRAWIE</span> EKRANÓW
+              EKSPERT W <span className="text-secondary animate-glowCyan">NAPRAWIE</span> EKRANÓW
             </h2>
 
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-              <span className="text-primary font-semibold animate-glow">ScreenHero</span> to zespół pasjonatów 
-              technologii z wieloletnim doświadczeniem w naprawie monitorów i telewizorów. 
-              Specjalizujemy się w kompleksowej diagnostyce i naprawie wszelkich usterek 
-              związanych z ekranami.
+              Jestem <span className="text-primary font-semibold animate-glow">ScreenHero</span> — niezależny specjalista 
+              z ponad 15-letnim doświadczeniem w naprawie monitorów i telewizorów. 
+              Osobiście zajmuję się każdą naprawą, gwarantując pełne zaangażowanie 
+              i najwyższą jakość wykonania.
             </p>
 
             <p className="mb-8 text-muted-foreground">
-              Naszą misją jest przywracanie życia uszkodzonym urządzeniom. Działamy szybko, 
-              profesjonalnie i zawsze z myślą o satysfakcji klienta. Każda naprawa objęta 
-              jest gwarancją, a bezpłatna diagnostyka pozwala poznać koszt naprawy przed 
-              podjęciem decyzji.
+              Moją misją jest przywracanie życia uszkodzonym urządzeniom. Działam szybko, 
+              profesjonalnie i zawsze z myślą o Twojej satysfakcji. Każda naprawa objęta 
+              jest gwarancją, a bezpłatna diagnostyka pozwala poznać koszt przed 
+              podjęciem decyzji. Bezpośredni kontakt ze mną oznacza jasną komunikację i indywidualne podejście do każdego zlecenia.
             </p>
 
             {/* Features List - simplified, single container animation */}
