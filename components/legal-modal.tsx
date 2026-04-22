@@ -231,7 +231,7 @@ const documents: Record<
             <li>naturalnego zużycia eksploatacyjnego.</li>
           </ul>
           <p>
-            9.3. Reklamacje należy zgłaszać drogą elektroniczną na adres kontakt@screenhero.pl
+            9.3. Reklamacje należy zgłaszać drogą elektroniczną na adres screenhero@proton.me
             lub osobiście.
           </p>
           <p>
@@ -404,7 +404,7 @@ const documents: Record<
           </h3>
           <p>
             W sprawach związanych z Regulaminem oraz korzystaniem z Serwisu prosimy
-            o kontakt pod adresem e-mail: kontakt@screenhero.pl
+            o kontakt pod adresem e-mail: screenhero@proton.me
           </p>
         </section>
       </div>
@@ -425,7 +425,7 @@ const documents: Record<
           <p>
             Administratorem Twoich danych osobowych jest firma ScreenHero z siedzibą w Polsce.
             W sprawach związanych z ochroną danych osobowych możesz skontaktować się z nami
-            pod adresem e-mail: kontakt@screenhero.pl.
+            pod adresem e-mail: screenhero@proton.me.
           </p>
         </section>
 
@@ -461,7 +461,7 @@ const documents: Record<
           </h3>
           <p>
             Dane osobowe przechowujemy przez okres niezbędny do realizacji celów, dla których
-            zostały zebrane — nie dłużej jednak niż przez 5 lat od zakończenia świadczenia usługi,
+            zostały zebrane — nie dłu��ej jednak niż przez 5 lat od zakończenia świadczenia usługi,
             lub do czasu wycofania zgody (w przypadku przetwarzania na podstawie zgody).
           </p>
         </section>
@@ -605,7 +605,7 @@ const documents: Record<
           </h3>
           <p>
             W przypadku pytań dotyczących polityki cookies prosimy o kontakt:
-            kontakt@screenhero.pl
+            screenhero@proton.me
           </p>
         </section>
       </div>

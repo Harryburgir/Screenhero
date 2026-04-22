@@ -501,11 +501,11 @@ export function Products() {
                   +48 509 273 694
                 </a>
                 <a
-                  href="mailto:kontakt@screenhero.pl"
+                  href="mailto:screenhero@proton.me"
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-yellow-500/40 bg-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400 transition-all hover:bg-yellow-500/30"
                 >
                   <Mail className="h-4 w-4" />
-                  kontakt@screenhero.pl
+                  screenhero@proton.me
                 </a>
               </div>
             </div>
@@ -531,11 +531,11 @@ export function Products() {
               +48 509 273 694
             </a>
             <a
-              href="mailto:kontakt@screenhero.pl"
+              href="mailto:screenhero@proton.me"
               className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
             >
               <Mail className="h-4 w-4" />
-              kontakt@screenhero.pl
+              screenhero@proton.me
             </a>
           </div>
         </motion.div>
