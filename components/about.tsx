@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Heart, Award, Cpu } from "lucide-react";
 
 const features = [
-  "Certyfikowany specjalista z wieloletnim doświadczeniem",
-  "Tylko oryginalne części zamienne",
-  "Bezpłatna diagnostyka i wycena",
-  "Gwarancja na wszystkie naprawy",
-  "Ekspresowa realizacja 24-48h",
-  "Dojazd do klienta w całym mieście",
+  "Specjalistyczna wiedza techniczna",
+  "Oryginalne części zamienne",
+  "Bezpłatna diagnostyka z wyceną",
+  "Gwarancja na wykonane usługi",
+  "Realizacja w ciągu 24-48 godzin",
+  "Obsługa na terenie całego miasta",
 ];
 
 const stats = [
-  { icon: Heart, value: "2 500+", label: "Zadowolonych klientów" },
-  { icon: Award, value: "15+", label: "Lat doświadczenia" },
+  { icon: Heart, value: "1 000+", label: "Zrealizowanych napraw" },
+  { icon: Award, value: "5+", label: "Lat doświadczenia" },
   { icon: Cpu, value: "98%", label: "Skuteczność napraw" },
 ];
 
@@ -87,17 +87,17 @@ export function About() {
             </h2>
 
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-              Jestem <span className="text-primary font-semibold animate-glow">ScreenHero</span> — niezależny specjalista 
-              z ponad 15-letnim doświadczeniem w naprawie monitorów i telewizorów. 
-              Osobiście zajmuję się każdą naprawą, gwarantując pełne zaangażowanie 
-              i najwyższą jakość wykonania.
+              Prowadzę <span className="text-primary font-semibold animate-glow">ScreenHero</span> — specjalistyczny serwis 
+              naprawy monitorów i telewizorów. Ponad 5 lat praktyki w branży pozwoliło mi 
+              zdobyć gruntowną wiedzę techniczną oraz wypracować skuteczne metody diagnostyki 
+              i naprawy szerokiej gamy urządzeń.
             </p>
 
             <p className="mb-8 text-muted-foreground">
-              Moją misją jest przywracanie życia uszkodzonym urządzeniom. Działam szybko, 
-              profesjonalnie i zawsze z myślą o Twojej satysfakcji. Każda naprawa objęta 
-              jest gwarancją, a bezpłatna diagnostyka pozwala poznać koszt przed 
-              podjęciem decyzji. Bezpośredni kontakt ze mną oznacza jasną komunikację i indywidualne podejście do każdego zlecenia.
+              Każde zlecenie realizuję osobiście, co gwarantuje pełną kontrolę nad jakością 
+              wykonania oraz bezpośrednią komunikację na każdym etapie naprawy. Oferuję 
+              bezpłatną diagnostykę z przejrzystą wyceną, gwarancję na wykonane usługi 
+              oraz elastyczne terminy realizacji dostosowane do potrzeb klienta.
             </p>
 
             {/* Features List - simplified, single container animation */}
