@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "kontakt@screenhero.pl",
-    href: "mailto:kontakt@screenhero.pl",
+    value: "screenhero@proton.me",
+    href: "mailto:screenhero@proton.me",
   },
   {
     icon: MapPin,
