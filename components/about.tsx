@@ -1,20 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Users, Award, Cpu } from "lucide-react";
+import { CheckCircle2, Heart, Award, Cpu } from "lucide-react";
 
 const features = [
-  "Certyfikowani technicy z wieloletnim doświadczeniem",
-  "Tylko oryginalne części zamienne",
-  "Bezpłatna diagnostyka i wycena",
-  "Gwarancja na wszystkie naprawy",
-  "Ekspresowa realizacja 24-48h",
-  "Dojazd do klienta w całym mieście",
+  "Specjalistyczna wiedza techniczna",
+  "Oryginalne części zamienne",
+  "Bezpłatna diagnostyka z wyceną",
+  "Gwarancja na wykonane usługi",
+  "Realizacja w ciągu 24-48 godzin",
+  "Obsługa na terenie całego miasta",
 ];
 
 const stats = [
-  { icon: Users, value: "10 000+", label: "Zadowolonych klientów" },
-  { icon: Award, value: "15+", label: "Lat doświadczenia" },
+  { icon: Heart, value: "1 000+", label: "Zrealizowanych napraw" },
+  { icon: Award, value: "5+", label: "Lat doświadczenia" },
   { icon: Cpu, value: "98%", label: "Skuteczność napraw" },
 ];
 
@@ -83,21 +83,21 @@ export function About() {
             </div>
 
             <h2 className="mb-6 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-              EKSPERCI W <span className="text-secondary animate-glowCyan">NAPRAWIE</span> EKRANÓW
+              EKSPERT W <span className="text-secondary animate-glowCyan">NAPRAWIE</span> EKRANÓW
             </h2>
 
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-              <span className="text-primary font-semibold animate-glow">ScreenHero</span> to zespół pasjonatów 
-              technologii z wieloletnim doświadczeniem w naprawie monitorów i telewizorów. 
-              Specjalizujemy się w kompleksowej diagnostyce i naprawie wszelkich usterek 
-              związanych z ekranami.
+              Prowadzę <span className="text-primary font-semibold animate-glow">ScreenHero</span> — specjalistyczny serwis 
+              naprawy monitorów i telewizorów. Ponad 5 lat praktyki w branży pozwoliło mi 
+              zdobyć gruntowną wiedzę techniczną oraz wypracować skuteczne metody diagnostyki 
+              i naprawy szerokiej gamy urządzeń.
             </p>
 
             <p className="mb-8 text-muted-foreground">
-              Naszą misją jest przywracanie życia uszkodzonym urządzeniom. Działamy szybko, 
-              profesjonalnie i zawsze z myślą o satysfakcji klienta. Każda naprawa objęta 
-              jest gwarancją, a bezpłatna diagnostyka pozwala poznać koszt naprawy przed 
-              podjęciem decyzji.
+              Każde zlecenie realizuję osobiście, co gwarantuje pełną kontrolę nad jakością 
+              wykonania oraz bezpośrednią komunikację na każdym etapie naprawy. Oferuję 
+              bezpłatną diagnostykę z przejrzystą wyceną, gwarancję na wykonane usługi 
+              oraz elastyczne terminy realizacji dostosowane do potrzeb klienta.
             </p>
 
             {/* Features List - simplified, single container animation */}

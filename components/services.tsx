@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Monitor, Tv, Smartphone, Wrench, RefreshCcw, Search, ArrowRight, X } from "lucide-react";
+import { Monitor, Tv, Wrench, RefreshCcw, Search, ArrowRight, X } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -33,7 +33,7 @@ const services: Service[] = [
     color: "primary",
     image: "/images/service-monitor.jpg",
     modalDescription:
-      "Specjalizujemy się w kompleksowej naprawie monitorów komputerowych każdej marki i rozmiaru — od małych 21\" po wielkoformatowe 49\" ultrapanoramy. Naprawiamy uszkodzone matryce IPS, VA, TN oraz OLED, wymieniamy podświetlenie LED i paski, regenerujemy zasilacze oraz płyty główne. Każda naprawa poprzedzona jest bezpłatną diagnostyką i szczegółowym kosztorysem.",
+      "Specjalizujemy się w kompleksowej naprawie monitorów komputerowych każdej marki i rozmiaru — od małych 21\" po wielkoformatowe 49\" ultrapanoramy. Naprawiamy uszkodzone matryce IPS, VA oraz TN, wymieniamy podświetlenie LED i paski, regenerujemy zasilacze oraz płyty główne. Każda naprawa poprzedzona jest bezpłatną diagnostyką i szczegółowym kosztorysem.",
     modalSteps: [
       "Bezpłatna diagnostyka i pomiar parametrów elektrycznych",
       "Identyfikacja uszkodzonego podzespołu — matryca, zasilacz lub PCB",
@@ -56,7 +56,7 @@ const services: Service[] = [
     color: "secondary",
     image: "/images/service-tv.jpg",
     modalDescription:
-      "Naprawiamy telewizory wszystkich czołowych producentów — Samsung, LG, Sony, Philips, Panasonic, Hisense i wielu innych. Obsługujemy technologie LCD, LED, QLED, NanoCell, OLED oraz AMOLED. Oferujemy wyjazd do klienta na terenie całego miasta — nie musisz transportować dużego TV do naszego serwisu. Naprawiamy zarówno usterki sprzętowe, jak i oprogramowanie (firmware, Smart TV).",
+      "Naprawiamy telewizory wszystkich czołowych producentów — Samsung, LG, Sony, Philips, Panasonic, Hisense i wielu innych. Obsługujemy technologie LCD, LED, QLED oraz NanoCell. Oferujemy wyjazd do klienta na terenie całego miasta — nie musisz transportować dużego TV do naszego serwisu. Naprawiamy zarówno usterki sprzętowe, jak i oprogramowanie (firmware, Smart TV).",
     modalSteps: [
       "Diagnoza na miejscu lub w serwisie — do wyboru klienta",
       "Naprawa matrycy, panelu podświetlenia lub modułu T-CON",
@@ -91,7 +91,7 @@ const services: Service[] = [
     modalFacts: [
       { label: "Czas realizacji", value: "1–3 dni robocze" },
       { label: "Gwarancja na matrycę", value: "12 miesięcy" },
-      { label: "Typ matryc", value: "IPS, VA, TN, OLED, QLED" },
+      { label: "Typ matryc", value: "IPS, VA, TN, QLED" },
     ],
   },
   {
@@ -117,29 +117,7 @@ const services: Service[] = [
       { label: "Raport pisemny", value: "Tak, w każdym przypadku" },
     ],
   },
-  {
-    icon: Smartphone,
-    title: "Ekrany Dotykowe",
-    description: "Naprawa i wymiana ekranów dotykowych, digitizerów, paneli sterowania.",
-    features: ["Kalibracja touch", "Wymiana digitizera", "Naprawa złącz"],
-    color: "secondary",
-    image: "/images/service-touch.jpg",
-    modalDescription:
-      "Ekrany dotykowe to coraz popularniejszy element monitorów interaktywnych, kiosków informacyjnych i paneli sterowania przemysłowego. Naprawiamy i wymieniamy digitizery pojemnościowe i rezystancyjne, przeprowadzamy kalibrację punktów dotyku oraz naprawiamy uszkodzone złącza i taśmy FFC. Posiadamy doświadczenie w serwisowaniu urządzeń zarówno konsumenckich, jak i przemysłowych.",
-    modalSteps: [
-      "Test cyfrowy warstwy dotykowej — odczyt nieaktywnych stref",
-      "Demontaż digitizera z zabezpieczeniem szkła ochronnego",
-      "Wymiana warstwy dotykowej na nową (pojemnościowa / rezystancyjna)",
-      "Kalibracja wielopunktowa — do 20 punktów dotykowych",
-      "Test precyzji i czułości na całej powierzchni ekranu",
-      "Montaż końcowy i weryfikacja w warunkach pracy",
-    ],
-    modalFacts: [
-      { label: "Czas realizacji", value: "2–4 dni robocze" },
-      { label: "Gwarancja", value: "12 miesięcy" },
-      { label: "Typ ekranów", value: "Pojemnościowe, rezystancyjne, IR" },
-    ],
-  },
+
   {
     icon: Wrench,
     title: "Serwis Pogwarancyjny",
