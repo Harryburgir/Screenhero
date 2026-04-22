@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Orbitron, Rajdhani } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { CookieConsent } from '@/components/cookie-consent'
 import './globals.css'
 
 const orbitron = Orbitron({ 
@@ -46,6 +47,7 @@ export default function RootLayout({
     <html lang="pl" className="bg-background">
       <body className={`${orbitron.variable} ${rajdhani.variable} font-sans antialiased`}>
         {children}
+        <CookieConsent />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
