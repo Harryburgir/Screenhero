@@ -49,8 +49,8 @@ export function Pricing() {
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(252, 224, 30, 0.15) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(252, 224, 30, 0.15) 1px, transparent 1px)
+              linear-gradient(rgba(0, 110, 255, 0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 110, 255, 0.15) 1px, transparent 1px)
             `,
             backgroundSize: "60px 60px",
           }}
@@ -138,7 +138,7 @@ export function Pricing() {
                     onClick={() => setSelectedDevice(value)}
                     className={`flex items-center justify-center gap-3 rounded border p-4 font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-wider transition-all ${
                       selectedDevice === value
-                        ? "border-primary bg-primary/10 text-primary shadow-[0_0_20px_rgba(252,224,30,0.15)]"
+                        ? "border-primary bg-primary/10 text-primary shadow-[0_0_20px_rgba(0,110,255,0.15)]"
                         : "border-border/50 bg-card/50 text-muted-foreground hover:border-primary/40 hover:text-foreground"
                     }`}
                   >
@@ -261,7 +261,7 @@ export function Pricing() {
             <Button
               type="submit"
               size="lg"
-              className="w-full bg-primary font-[family-name:var(--font-display)] text-lg font-bold uppercase tracking-wider text-primary-foreground transition-all hover:bg-primary/90 hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(252,224,30,0.3)]"
+              className="w-full bg-primary font-[family-name:var(--font-display)] text-lg font-bold uppercase tracking-wider text-primary-foreground transition-all hover:bg-primary/90 hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(0,110,255,0.3)]"
             >
               <Send className="mr-2 h-5 w-5" />
               Wyślij zgłoszenie — bezpłatna wycena

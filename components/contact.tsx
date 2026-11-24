@@ -57,8 +57,8 @@ export function Contact() {
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(252, 224, 30, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(252, 224, 30, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(0, 110, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 110, 255, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '40px 40px',
           }}

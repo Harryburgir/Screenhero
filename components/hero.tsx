@@ -28,8 +28,8 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(252, 224, 30, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(252, 224, 30, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(0, 110, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 110, 255, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',
           }}
@@ -118,7 +118,7 @@ export function Hero() {
               Profesjonalna naprawa monitorów i telewizorów.
               <span className="text-secondary animate-glowCyan"> Szybka diagnostyka</span>,{" "}
               <span className="text-primary animate-glow">ekspresowa realizacja</span>,{" "}
-              <span className="text-accent animate-glowMagenta">gwarancja jakości</span>.
+              <span className="text-accent animate-glowSilver">gwarancja jakości</span>.
             </motion.p>
 
             {/* CTA Buttons - CSS transitions for hover */}
@@ -210,7 +210,7 @@ export function Hero() {
           className="absolute left-0 right-0 h-px animate-pulse bg-primary/30"
           style={{
             top: '50%',
-            boxShadow: '0 0 20px 5px rgba(252, 224, 30, 0.3)',
+            boxShadow: '0 0 20px 5px rgba(0, 110, 255, 0.3)',
           }}
         />
       </div>

@@ -27,7 +27,7 @@ export function About() {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              radial-gradient(circle at 25% 25%, rgba(252, 224, 30, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 25% 25%, rgba(0, 110, 255, 0.1) 0%, transparent 50%),
               radial-gradient(circle at 75% 75%, rgba(0, 236, 255, 0.1) 0%, transparent 50%)
             `,
           }}
