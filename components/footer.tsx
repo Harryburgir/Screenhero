@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { LegalModal, type LegalDocumentType } from "./legal-modal";
 
@@ -55,9 +56,14 @@ export function Footer() {
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
             {/* Brand Column */}
             <div className="lg:col-span-2">
-              <Link href="/" className="group mb-6 inline-flex flex-col font-[family-name:var(--font-display)] font-black uppercase leading-none tracking-wider transition-all hover:drop-shadow-[0_0_16px_rgba(252,224,30,0.5)]">
-                <span className="text-2xl text-primary">Electro</span>
-                <span className="text-sm tracking-[0.18em] text-foreground/80">Best Partner</span>
+              <Link href="/" className="group mb-6 inline-flex items-center transition-all hover:drop-shadow-[0_0_16px_rgba(0,153,255,0.55)]">
+                <Image
+                  src="/electro-best-partner-logo.png"
+                  alt="Electro Best Partner"
+                  width={1643}
+                  height={944}
+                  className="h-24 w-auto object-contain"
+                />
               </Link>
 
               <p className="mb-6 max-w-sm text-muted-foreground">

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -21,10 +22,14 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="group relative flex items-center">
           <div className="absolute inset-0 rounded-lg bg-primary/10 blur-xl opacity-0 transition-opacity group-hover:opacity-100" />
-          <span className="relative flex flex-col font-[family-name:var(--font-display)] font-black uppercase leading-none tracking-wider text-foreground transition-all group-hover:drop-shadow-[0_0_16px_rgba(252,224,30,0.5)]">
-            <span className="text-base text-primary sm:text-lg">Electro</span>
-            <span className="text-[0.65rem] tracking-[0.18em] text-foreground/80 sm:text-xs">Best Partner</span>
-          </span>
+          <Image
+            src="/electro-best-partner-logo.png"
+            alt="Electro Best Partner"
+            width={1643}
+            height={944}
+            className="relative h-14 w-auto object-contain transition-all duration-300 group-hover:drop-shadow-[0_0_16px_rgba(0,153,255,0.55)]"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}

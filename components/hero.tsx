@@ -43,9 +43,14 @@ export function Hero() {
 
       {/* Background brand watermark */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden" aria-hidden="true">
-        <span className="select-none whitespace-nowrap font-[family-name:var(--font-display)] text-[clamp(3rem,12vw,10rem)] font-black uppercase tracking-[0.12em] text-foreground opacity-[0.035]">
-          Electro Best Partner
-        </span>
+        <Image
+          src="/electro-best-partner-logo.png"
+          alt=""
+          width={1643}
+          height={944}
+          className="h-auto w-[70vw] max-w-3xl select-none opacity-[0.035]"
+          priority
+        />
       </div>
 
       {/* Content */}
@@ -185,8 +190,8 @@ export function Hero() {
 
             <div className="transition-transform duration-300 hover:scale-105">
               <Image
-                src="/hero-image.png"
-                alt="Neonowy telewizor w cyberpunkowym mieście"
+                src="/electro-best-partner-logo.png"
+                alt="Logo Electro Best Partner"
                 width={700}
                 height={560}
                 className="relative z-10 h-auto w-full max-w-sm select-none md:max-w-md lg:max-w-full"
