@@ -24,7 +24,7 @@ export function Header() {
           <div className="absolute inset-0 rounded-lg bg-primary/10 blur-xl opacity-0 transition-opacity group-hover:opacity-100" />
           <Image
             src="/logo.png"
-            alt="ScreenHero - Naprawa i wymiana ekranów"
+            alt="TanieTelewizorki"
             width={180}
             height={72}
             className="relative h-14 w-auto object-contain transition-all duration-300 group-hover:drop-shadow-[0_0_16px_rgba(252,224,30,0.7)]"

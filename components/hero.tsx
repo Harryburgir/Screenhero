@@ -192,7 +192,7 @@ export function Hero() {
             <div className="transition-transform duration-300 hover:scale-105">
               <Image
                 src="/hero-image.png"
-                alt="ScreenHero - cyberpunkowy bohater naprawy ekranów"
+                alt="Neonowy telewizor w cyberpunkowym mieście"
                 width={700}
                 height={560}
                 className="relative z-10 h-auto w-full max-w-sm select-none md:max-w-md lg:max-w-full"

@@ -16,7 +16,7 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: 'ScreenHero | Naprawa i Wymiana Monitorów & TV',
+  title: 'TanieTelewizorki | Telewizory i ekrany',
   description: 'Profesjonalna naprawa i wymiana ekranów monitorów oraz telewizorów. Szybka diagnostyka, ekspresowa realizacja, gwarancja jakości.',
   generator: 'v0.app',
   icons: {
