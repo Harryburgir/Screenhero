@@ -87,7 +87,7 @@ export function About() {
             </h2>
 
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-              Prowadzę <span className="text-primary font-semibold animate-glow">ScreenHero</span> — specjalistyczny serwis 
+              Prowadzę <span className="text-primary font-semibold animate-glow">Electro Best Partner</span> — specjalistyczny serwis 
               naprawy monitorów i telewizorów. Ponad 5 lat praktyki w branży pozwoliło mi 
               zdobyć gruntowną wiedzę techniczną oraz wypracować skuteczne metody diagnostyki 
               i naprawy szerokiej gamy urządzeń.

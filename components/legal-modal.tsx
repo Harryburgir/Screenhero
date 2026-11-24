@@ -27,8 +27,8 @@ const documents: Record<
             §1. Postanowienia ogólne
           </h3>
           <p>
-            1.1. Niniejszy Regulamin określa zasady korzystania z serwisu internetowego ScreenHero,
-            dostępnego pod adresem screenhero.pl (dalej: &quot;Serwis&quot;).
+            1.1. Niniejszy Regulamin określa zasady korzystania z serwisu internetowego Electro Best Partner
+            (dalej: &quot;Serwis&quot;).
           </p>
           <p>
             1.2. Serwis prowadzony jest przez osobę fizyczną nieprowadzącą zarejestrowanej
@@ -56,7 +56,7 @@ const documents: Record<
             §2. Definicje
           </h3>
           <ul className="list-inside list-disc space-y-1 pl-2">
-            <li><strong className="text-foreground">Serwis</strong> — strona internetowa screenhero.pl wraz z wszelkimi podstronami i funkcjonalnościami.</li>
+            <li><strong className="text-foreground">Serwis</strong> — strona internetowa Electro Best Partner wraz z wszelkimi podstronami i funkcjonalnościami.</li>
             <li><strong className="text-foreground">Usługodawca</strong> — osoba fizyczna nieprowadząca zarejestrowanej działalności gospodarczej, właściciel i administrator Serwisu, działająca jako podwykonawca.</li>
             <li><strong className="text-foreground">Użytkownik</strong> — osoba fizyczna lub prawna korzystająca z Serwisu.</li>
             <li><strong className="text-foreground">Zleceniodawca</strong> — podmiot (osoba fizyczna lub prawna), który zleca wykonanie usługi Usługodawcy.</li>
@@ -423,7 +423,7 @@ const documents: Record<
             1. Administrator danych osobowych
           </h3>
           <p>
-            Administratorem Twoich danych osobowych jest firma ScreenHero z siedzibą w Polsce.
+            Administratorem Twoich danych osobowych jest firma Electro Best Partner z siedzibą w Polsce.
             W sprawach związanych z ochroną danych osobowych możesz skontaktować się z nami
             pod adresem e-mail: screenhero@proton.me.
           </p>

@@ -131,7 +131,7 @@ export function Contact() {
             <div className="relative hidden mt-8 aspect-video overflow-hidden rounded border border-border/50 lg:block transition-transform duration-200 hover:scale-[1.02]">
               <Image
                 src="/images/contact-shop.jpg"
-                alt="Serwis ScreenHero - nasze sklepy w Bydgoszczy i Poznaniu"
+                alt="Serwis Electro Best Partner - nasze sklepy w Bydgoszczy i Poznaniu"
                 fill
                 className="object-cover"
               />

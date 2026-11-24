@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { LegalModal, type LegalDocumentType } from "./legal-modal";
 
@@ -56,14 +55,9 @@ export function Footer() {
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
             {/* Brand Column */}
             <div className="lg:col-span-2">
-              <Link href="/" className="group mb-6 inline-flex items-center">
-                <Image
-                  src="/logo.png"
-                  alt="TanieTelewizorki"
-                  width={240}
-                  height={135}
-                  className="h-16 w-auto object-contain"
-                />
+              <Link href="/" className="group mb-6 inline-flex flex-col font-[family-name:var(--font-display)] font-black uppercase leading-none tracking-wider transition-all hover:drop-shadow-[0_0_16px_rgba(252,224,30,0.5)]">
+                <span className="text-2xl text-primary">Electro</span>
+                <span className="text-sm tracking-[0.18em] text-foreground/80">Best Partner</span>
               </Link>
 
               <p className="mb-6 max-w-sm text-muted-foreground">
@@ -125,7 +119,7 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} TanieTelewizorki. Wszelkie prawa zastrzeżone.
+              &copy; {new Date().getFullYear()} Electro Best Partner. Wszelkie prawa zastrzeżone.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
               <button

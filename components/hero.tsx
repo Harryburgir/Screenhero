@@ -41,17 +41,11 @@ export function Hero() {
       <div className="absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-secondary/15 blur-[60px]" />
       <div className="absolute right-1/3 top-1/2 h-64 w-64 rounded-full bg-accent/10 blur-[50px]" />
 
-      {/* Background logo watermark */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
-        <Image
-          src="/logo.png"
-          alt=""
-          width={900}
-          height={720}
-          className="h-auto w-[70vw] max-w-3xl select-none opacity-[0.04]"
-          aria-hidden="true"
-          priority
-        />
+      {/* Background brand watermark */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden" aria-hidden="true">
+        <span className="select-none whitespace-nowrap font-[family-name:var(--font-display)] text-[clamp(3rem,12vw,10rem)] font-black uppercase tracking-[0.12em] text-foreground opacity-[0.035]">
+          Electro Best Partner
+        </span>
       </div>
 
       {/* Content */}
