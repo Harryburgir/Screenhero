@@ -23,11 +23,11 @@ export function Header() {
         <Link href="/" className="group relative flex items-center">
           <div className="absolute inset-0 rounded-lg bg-primary/10 blur-xl opacity-0 transition-opacity group-hover:opacity-100" />
           <Image
-            src="/logo.png"
-            alt="ScreenHero - Naprawa i wymiana ekranów"
-            width={180}
-            height={72}
-            className="relative h-14 w-auto object-contain transition-all duration-300 group-hover:drop-shadow-[0_0_16px_rgba(252,224,30,0.7)]"
+            src="/electro-best-partner-logo.png"
+            alt="Electro Best Partner"
+            width={1643}
+            height={944}
+            className="relative h-14 w-auto object-contain transition-all duration-300 group-hover:drop-shadow-[0_0_16px_rgba(0,153,255,0.55)]"
             priority
           />
         </Link>

@@ -28,8 +28,8 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(252, 224, 30, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(252, 224, 30, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(0, 110, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 110, 255, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',
           }}
@@ -41,15 +41,14 @@ export function Hero() {
       <div className="absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-secondary/15 blur-[60px]" />
       <div className="absolute right-1/3 top-1/2 h-64 w-64 rounded-full bg-accent/10 blur-[50px]" />
 
-      {/* Background logo watermark */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
+      {/* Background brand watermark */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden" aria-hidden="true">
         <Image
-          src="/logo.png"
+          src="/electro-best-partner-logo.png"
           alt=""
-          width={900}
-          height={720}
-          className="h-auto w-[70vw] max-w-3xl select-none opacity-[0.04]"
-          aria-hidden="true"
+          width={1643}
+          height={944}
+          className="h-auto w-[70vw] max-w-3xl select-none opacity-[0.035]"
           priority
         />
       </div>
@@ -119,7 +118,7 @@ export function Hero() {
               Profesjonalna naprawa monitorów i telewizorów.
               <span className="text-secondary animate-glowCyan"> Szybka diagnostyka</span>,{" "}
               <span className="text-primary animate-glow">ekspresowa realizacja</span>,{" "}
-              <span className="text-accent animate-glowMagenta">gwarancja jakości</span>.
+              <span className="text-accent animate-glowSilver">gwarancja jakości</span>.
             </motion.p>
 
             {/* CTA Buttons - CSS transitions for hover */}
@@ -191,8 +190,8 @@ export function Hero() {
 
             <div className="transition-transform duration-300 hover:scale-105">
               <Image
-                src="/hero-image.png"
-                alt="ScreenHero - cyberpunkowy bohater naprawy ekranów"
+                src="/electro-best-partner-logo.png"
+                alt="Logo Electro Best Partner"
                 width={700}
                 height={560}
                 className="relative z-10 h-auto w-full max-w-sm select-none md:max-w-md lg:max-w-full"
@@ -211,7 +210,7 @@ export function Hero() {
           className="absolute left-0 right-0 h-px animate-pulse bg-primary/30"
           style={{
             top: '50%',
-            boxShadow: '0 0 20px 5px rgba(252, 224, 30, 0.3)',
+            boxShadow: '0 0 20px 5px rgba(0, 110, 255, 0.3)',
           }}
         />
       </div>

@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Monitor, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import Image from "next/image";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { LegalModal, type LegalDocumentType } from "./legal-modal";
 
 const footerLinks = [
@@ -55,18 +56,14 @@ export function Footer() {
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
             {/* Brand Column */}
             <div className="lg:col-span-2">
-              <Link href="/" className="group mb-6 inline-flex items-center gap-3">
-                <div className="relative flex h-12 w-12 items-center justify-center">
-                  <div className="absolute inset-0 rounded bg-primary/20 blur-lg transition-all group-hover:bg-primary/40" />
-                  <div className="relative flex h-10 w-10 items-center justify-center rounded border border-primary bg-background">
-                    <Monitor className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-[family-name:var(--font-display)] text-xl font-bold tracking-wider text-primary">
-                    SCREEN<span className="text-secondary">HERO</span>
-                  </span>
-                </div>
+              <Link href="/" className="group mb-6 inline-flex items-center transition-all hover:drop-shadow-[0_0_16px_rgba(0,153,255,0.55)]">
+                <Image
+                  src="/electro-best-partner-logo.png"
+                  alt="Electro Best Partner"
+                  width={1643}
+                  height={944}
+                  className="h-24 w-auto object-contain"
+                />
               </Link>
 
               <p className="mb-6 max-w-sm text-muted-foreground">
@@ -128,7 +125,7 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/50 pt-8 md:flex-row">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} ScreenHero. Wszelkie prawa zastrzeżone.
+              &copy; {new Date().getFullYear()} Electro Best Partner. Wszelkie prawa zastrzeżone.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
               <button

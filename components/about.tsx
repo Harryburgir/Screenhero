@@ -27,7 +27,7 @@ export function About() {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              radial-gradient(circle at 25% 25%, rgba(252, 224, 30, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 25% 25%, rgba(0, 110, 255, 0.1) 0%, transparent 50%),
               radial-gradient(circle at 75% 75%, rgba(0, 236, 255, 0.1) 0%, transparent 50%)
             `,
           }}
@@ -83,21 +83,19 @@ export function About() {
             </div>
 
             <h2 className="mb-6 font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-              EKSPERT W <span className="text-secondary animate-glowCyan">NAPRAWIE</span> EKRANÓW
+              EKSPERCI W <span className="text-secondary animate-glowCyan">NAPRAWIE</span> EKRANÓW
             </h2>
 
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-              Prowadzę <span className="text-primary font-semibold animate-glow">ScreenHero</span> — specjalistyczny serwis 
-              naprawy monitorów i telewizorów. Ponad 5 lat praktyki w branży pozwoliło mi 
-              zdobyć gruntowną wiedzę techniczną oraz wypracować skuteczne metody diagnostyki 
-              i naprawy szerokiej gamy urządzeń.
+              <span className="text-primary font-semibold animate-glow">Electro Best Partner</span> to specjalistyczny serwis
+              naprawy monitorów i telewizorów, tworzony przez zespół wykwalifikowanych techników. Ponad 5 lat doświadczenia
+              w branży pozwala nam skutecznie diagnozować i naprawiać szeroką gamę urządzeń.
             </p>
 
             <p className="mb-8 text-muted-foreground">
-              Każde zlecenie realizuję osobiście, co gwarantuje pełną kontrolę nad jakością 
-              wykonania oraz bezpośrednią komunikację na każdym etapie naprawy. Oferuję 
-              bezpłatną diagnostykę z przejrzystą wyceną, gwarancję na wykonane usługi 
-              oraz elastyczne terminy realizacji dostosowane do potrzeb klienta.
+              Nad każdym zleceniem czuwa nasz zespół specjalistów — od bezpłatnej diagnostyki i przejrzystej wyceny
+              po sprawną naprawę. Zapewniamy wysoką jakość usług, gwarancję na wykonane prace oraz elastyczne terminy
+              dopasowane do potrzeb klientów.
             </p>
 
             {/* Features List - simplified, single container animation */}

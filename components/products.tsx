@@ -174,7 +174,7 @@ const products: Product[] = [
     icon: Tv,
     title: "Telewizory",
     category: "tv",
-    color: "from-red-400/20 to-orange-500/20",
+    color: "from-blue-400/20 to-cyan-500/20",
     sizes: [
       {
         inches: 32,
@@ -423,7 +423,7 @@ export function Products() {
           className="mt-20"
         >
           <div className="mb-8 flex items-center gap-4">
-            <div className="rounded-lg bg-gradient-to-br from-yellow-400/20 to-orange-500/20 p-3">
+            <div className="rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 p-3">
               <Zap className="h-6 w-6 text-foreground" />
             </div>
             <div>
@@ -443,11 +443,11 @@ export function Products() {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="rounded-lg border border-border/40 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 p-5 transition-all hover:border-border/80 hover:shadow-lg"
+                className="rounded-lg border border-border/40 bg-gradient-to-br from-primary/10 to-secondary/10 p-5 transition-all hover:border-border/80 hover:shadow-lg"
               >
                 <div className="mb-3 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-yellow-500/20">
-                    <span className="font-[family-name:var(--font-display)] text-lg font-bold text-yellow-400">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20">
+                    <span className="font-[family-name:var(--font-display)] text-lg font-bold text-primary">
                       {psu.voltage}
                     </span>
                   </div>
@@ -463,7 +463,7 @@ export function Products() {
                   {psu.typicalUses.map((use) => (
                     <span
                       key={use}
-                      className="rounded-full bg-yellow-500/10 px-2 py-0.5 text-xs font-medium text-yellow-500"
+                      className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary"
                     >
                       {use}
                     </span>
@@ -478,11 +478,11 @@ export function Products() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-8 rounded-lg border border-yellow-500/30 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 p-6"
+            className="mt-8 rounded-lg border border-primary/30 bg-gradient-to-r from-primary/10 to-secondary/10 p-6"
           >
             <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-yellow-500/20">
-                <Zap className="h-7 w-7 text-yellow-400" />
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/20">
+                <Zap className="h-7 w-7 text-primary" />
               </div>
               <div className="flex-1">
                 <h4 className="mb-1 font-[family-name:var(--font-display)] text-lg font-bold text-foreground">
@@ -495,14 +495,14 @@ export function Products() {
               <div className="flex flex-col gap-2 sm:flex-row">
                 <a
                   href="tel:+48509273694"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-yellow-500/40 bg-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400 transition-all hover:bg-yellow-500/30"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/40 bg-primary/20 px-4 py-2 text-sm font-medium text-primary transition-all hover:bg-primary/30"
                 >
                   <Phone className="h-4 w-4" />
                   +48 509 273 694
                 </a>
                 <a
                   href="mailto:screenhero@proton.me"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-yellow-500/40 bg-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400 transition-all hover:bg-yellow-500/30"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/40 bg-primary/20 px-4 py-2 text-sm font-medium text-primary transition-all hover:bg-primary/30"
                 >
                   <Mail className="h-4 w-4" />
                   screenhero@proton.me

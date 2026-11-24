@@ -57,8 +57,8 @@ export function Contact() {
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(252, 224, 30, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(252, 224, 30, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(0, 110, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 110, 255, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '40px 40px',
           }}
@@ -131,7 +131,7 @@ export function Contact() {
             <div className="relative hidden mt-8 aspect-video overflow-hidden rounded border border-border/50 lg:block transition-transform duration-200 hover:scale-[1.02]">
               <Image
                 src="/images/contact-shop.jpg"
-                alt="Serwis ScreenHero - nasze sklepy w Bydgoszczy i Poznaniu"
+                alt="Serwis Electro Best Partner - nasze sklepy w Bydgoszczy i Poznaniu"
                 fill
                 className="object-cover"
               />
